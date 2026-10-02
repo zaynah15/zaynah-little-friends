@@ -1,0 +1,19 @@
+export type CharacterState =
+  | "idle"
+  | "happy"
+  | "angry"
+  | "thinking"
+  | "reading";
+
+export type VisionSignals = {
+  smile: number;
+  anger: number;
+  mouthOpen: number;
+  handNearHead: boolean;
+  bookVisible: boolean;
+  readingGesture?: boolean;
+  shoulders?: {
+    left: { x: number; y: number; visibility: number };
+    right: { x: number; y: number; visibility: number };
+  };
+};
